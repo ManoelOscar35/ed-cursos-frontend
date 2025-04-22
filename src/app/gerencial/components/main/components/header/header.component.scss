@@ -1,0 +1,45 @@
+.custom-toolbar {
+    height: 80px;
+    background-color: white;
+    color: black; /* para o texto ficar visível */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra leve */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toolbar-left,
+    .toolbar-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .toolbar-left {
+        .logo {
+            height: 60px;
+            width: 100px;
+            border-radius: 8px;
+            margin-right: 36px;
+        }
+
+        .menu-item {
+            margin-right: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #3f51b5; // cor de hover azul (padrão Angular Material Indigo)
+            }
+        }
+    }
+
+    .toolbar-right {
+        mat-icon {
+            color: black;
+            font-size: 28px;
+        }
+    }
+}
