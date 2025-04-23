@@ -9,9 +9,10 @@
   <span class="spacer"></span> <!-- Empurra para a direita -->
 
   <!-- Área Direita -->
-  <div class="toolbar-right">
-    <button mat-icon-button aria-label="User Account">
+  <div class="toolbar-right" *ngIf="isLogin">
+    <button mat-icon-button aria-label="User Account" (click)="sair();">
       <mat-icon>person</mat-icon>
+      <p class="marginSair">Sair</p>
     </button>
   </div>
 </mat-toolbar>

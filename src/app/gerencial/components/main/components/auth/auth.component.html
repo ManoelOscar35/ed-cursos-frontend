@@ -1,0 +1,32 @@
+<mat-card class="auth-card">
+    <h2>{{ isLogin ? 'Login' : 'Cadastro' }}</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="password" required />
+      </mat-form-field>
+  
+      <!-- Campo extra para cadastro -->
+      <ng-container *ngIf="!isLogin">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Confirmar Senha</mat-label>
+          <input matInput type="password" formControlName="confirmPassword" required />
+        </mat-form-field>
+      </ng-container>
+  
+      <button mat-raised-button color="primary" class="full-width" type="submit">
+        {{ isLogin ? 'Entrar' : 'Cadastrar' }}
+      </button>
+  
+      <button mat-button color="accent" class="toggle-button" type="button" (click)="toggleForm()">
+        {{ isLogin ? 'Criar conta' : 'Já tenho conta' }}
+      </button>
+    </form>
+</mat-card>
+  

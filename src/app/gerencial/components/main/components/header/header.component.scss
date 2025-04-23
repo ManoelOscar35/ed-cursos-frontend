@@ -37,9 +37,19 @@
     }
 
     .toolbar-right {
+        position: relative;
+
         mat-icon {
             color: black;
             font-size: 28px;
+        }
+
+        .marginSair {
+            position: absolute;
+            top: 40px;
+            left: 25px;
+            color: black;
+            font-size: medium;
         }
     }
 }

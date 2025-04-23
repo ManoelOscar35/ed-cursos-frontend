@@ -1,0 +1,26 @@
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  
+    .full-width {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .toggle-button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+}
+  
